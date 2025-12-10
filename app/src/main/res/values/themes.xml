@@ -1,0 +1,9 @@
+<resources>
+    <style name="Theme.KRSNota" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/green_primary</item>
+        <item name="colorPrimaryVariant">@color/green_dark</item>
+        <item name="android:statusBarColor">@color/green_dark</item>
+        <item name="android:windowBackground">@color/green_light</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+    </style>
+</resources>

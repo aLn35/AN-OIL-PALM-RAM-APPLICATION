@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ==========================
+         BASE APP THEME
+    =========================== -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar" />
+
+    <!-- =====================================================================
+         PREVIEW TABLE STYLES
+         (DIPAKAI DI activity_preview.xml)
+    ====================================================================== -->
+
+    <!-- Row container untuk 1 baris label & value -->
+    <style name="PreviewRowStyle">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:padding">6dp</item>
+        <item name="android:weightSum">2</item>
+    </style>
+
+    <!-- Label kiri (nama field) -->
+    <style name="PreviewLeftText">
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#444444</item>
+    </style>
+
+    <!-- Nilai kanan (hasil perhitungan) -->
+    <style name="PreviewRightText">
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:gravity">end</item>
+    </style>
+
+    <!-- Jika ingin TOTAL AKHIR lebih kuat -->
+    <style name="PreviewRightText.Bold" parent="PreviewRightText">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+
+    <!-- =====================================================================
+         DASHBOARD CARD STYLE (untuk dashboard biar rapi & glossy)
+    ====================================================================== -->
+    <style name="DashboardCard">
+        <item name="android:background">@drawable/dashboard_card</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:elevation">6dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+
+    <!-- =====================================================================
+         TAB BUTTON STYLE (active / inactive)
+    ====================================================================== -->
+    <style name="TabActive">
+        <item name="android:background">@drawable/tab_active</item>
+        <item name="android:textColor">#1B5E20</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="TabInactive">
+        <item name="android:background">@drawable/tab_inactive</item>
+        <item name="android:textColor">#666666</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+</resources>

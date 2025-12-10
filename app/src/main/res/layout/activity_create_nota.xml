@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ======================= SCROLL AREA ======================= -->
+    <ScrollView
+        android:id="@+id/scrollRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E6F3EB"
+        android:padding="16dp"
+        android:layout_above="@+id/bottomNav">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- =========================================================
+                 ⚠️ SEMUA ISI FORM TETAP SAMA 100% TANPA ADA PERUBAHAN
+                 ========================================================= -->
+
+            <!-- ======================= HEADER ======================= -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@drawable/bg_header_card"
+                android:elevation="4dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/tvHeaderTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="KEMPAS RAM SEHATI (KRS)"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#1B5E20"
+                    android:letterSpacing="0.04"/>
+
+                <TextView
+                    android:id="@+id/tvHeaderAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="JL. BLOK KOSONG  •  SUBAN – RAWANG KEMPAS"
+                    android:textSize="12sp"
+                    android:textColor="#335F3E"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+            <!-- ======================= DATE & TIME ======================= -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:background="@drawable/bg_section_card"
+                android:layout_marginBottom="16dp"
+                android:elevation="2dp">
+
+                <TextView
+                    android:text="Tanggal:"
+                    android:textSize="14sp"
+                    android:textColor="#145214"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_marginStart="8dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:background="@drawable/rounded_box"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:text="--/--/----"/>
+
+                <TextView
+                    android:layout_marginStart="12dp"
+                    android:text="Jam:"
+                    android:textSize="14sp"
+                    android:textColor="#145214"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_marginStart="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:background="@drawable/rounded_box"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:text="--:--"/>
+            </LinearLayout>
+
+            <!-- ======================= DATA PEMILIK ======================= -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_section_card"
+                android:elevation="2dp"
+                android:layout_marginBottom="16dp">
+
+                <!-- Kendaraan + Nama -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/edtKendaraan"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Kendaraan"
+                        android:background="@drawable/rounded_box"
+                        android:padding="14dp"/>
+
+                    <!-- DULU: EditText -->
+                    <!-- BARU: AutoCompleteTextView -->
+                    <AutoCompleteTextView
+                        android:id="@+id/edtNama"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Nama Pemasok"
+                        android:background="@drawable/rounded_box"
+                        android:padding="14dp"
+                        android:completionThreshold="1"/>
+
+                </LinearLayout>
+
+                <!-- Potongan %, Masuk, Keluar -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/edtPotPercent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Potg %"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/rounded_box"
+                        android:padding="14dp"/>
+
+                    <EditText
+                        android:id="@+id/edtMasuk"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Masuk (kg)"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/rounded_box"
+                        android:padding="14dp"/>
+
+                    <EditText
+                        android:id="@+id/edtKeluar"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Keluar (kg)"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/rounded_box"
+                        android:padding="14dp"/>
+                </LinearLayout>
+
+                <!-- NETTO & HARGA -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Netto"
+                            android:textSize="14sp"
+                            android:textColor="#145214"
+                            android:paddingBottom="4dp"/>
+
+                        <TextView
+                            android:id="@+id/tvNetto"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:background="@drawable/rounded_box"
+                            android:text="0.00"/>
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/edtPrice"
+                        android:layout_marginStart="16dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Harga / kg"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/rounded_box"
+                        android:padding="14dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ======================= CHECKBOXES ======================= -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_section_card"
+                android:elevation="2dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2">
+
+                    <CheckBox
+                        android:id="@+id/cbMuat"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Muat / Supir"
+                        android:textColor="#145214"
+                        android:padding="6dp"/>
+
+                    <CheckBox
+                        android:id="@+id/cbAmpang"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Ampang-Ampang"
+                        android:textColor="#145214"
+                        android:padding="6dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_marginTop="6dp">
+
+                    <CheckBox
+                        android:id="@+id/cbUtang"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Potong Utang"
+                        android:textColor="#145214"
+                        android:padding="6dp"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ======================= POTONGAN DETAIL ======================= -->
+            <LinearLayout
+                android:id="@+id/layoutPotongan"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_section_card"
+                android:visibility="gone"
+                android:elevation="2dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/edtMuat"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Jumlah Muat"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/rounded_box"
+                        android:padding="14dp"/>
+
+                    <EditText
+                        android:id="@+id/edtAmpang"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Jumlah Ampang"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/rounded_box"
+                        android:padding="14dp"/>
+
+                    <EditText
+                        android:id="@+id/edtUtang"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Potong Utang (Rp)"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/rounded_box"
+                        android:padding="14dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ======================= BUTTON PANEL ======================= -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:weightSum="4">
+
+                <Button
+                    android:id="@+id/btnPreview"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_bg2"
+                    android:text="PREVIEW"
+                    android:textColor="#FFF"
+                    android:textStyle="bold"/>
+
+                <Button
+                    android:id="@+id/btnSaveNota"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/button_bg"
+                    android:text="SIMPAN"
+                    android:textColor="#FFF"
+                    android:textStyle="bold"/>
+
+                <Button
+                    android:id="@+id/btnPdfOption"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/button_bg2"
+                    android:text="PDF / PRINT"
+                    android:textColor="#FFF"
+                    android:textStyle="bold"/>
+
+                <Button
+                    android:id="@+id/btnReset"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/button_bg3"
+                    android:text="RESET"
+                    android:textColor="#FFF"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- ======================= RESULTS ======================= -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_section_card"
+                android:elevation="2dp"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:id="@+id/tvSubtotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:textStyle="bold"
+                    android:textColor="#145214"
+                    android:padding="6dp"/>
+
+                <TextView
+                    android:id="@+id/tvTotalPotongan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:textColor="#145214"
+                    android:padding="6dp"/>
+
+                <TextView
+                    android:id="@+id/tvTotalAkhir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:textStyle="bold"
+                    android:textColor="#1B5E20"
+                    android:padding="6dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ======================= FIXED BOTTOM NAV ======================= -->
+    <include
+        android:id="@+id/bottomNav"
+        layout="@layout/layout_bottom_nav"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="70dp" />
+
+</RelativeLayout>

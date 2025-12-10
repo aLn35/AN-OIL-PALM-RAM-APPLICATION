@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ramkrsmama">
+
+    <!-- Internet untuk Firebase -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="KRS Nota"
+        android:theme="@style/Theme.KRSNota"
+        android:usesCleartextTraffic="false">
+
+        <!-- LOGIN (LAUNCHER) -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- REGISTER -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+
+        <!-- DASHBOARD -->
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="false" />
+
+        <!-- CREATE NOTA -->
+        <activity
+            android:name=".CreateNotaActivity"
+            android:exported="false" />
+
+        <!-- PREVIEW PDF/NOTA -->
+        <activity
+            android:name=".PreviewActivity"
+            android:exported="false" />
+
+        <!-- CUSTOMER LIST -->
+        <activity
+            android:name=".CustomerListActivity"
+            android:exported="false" />
+
+        <!-- ADD / EDIT CUSTOMER -->
+        <activity
+            android:name=".AddEditCustomerActivity"
+            android:exported="false" />
+
+        <!-- CUSTOMER DETAIL -->
+        <activity
+            android:name=".CustomerDetailActivity"
+            android:exported="false" />
+
+        <!-- INPUT / PEMBAYARAN UTANG -->
+        <activity
+            android:name=".DebtPaymentActivity"
+            android:exported="false" />
+
+        <!-- File Provider (WAJIB jika kirim / buka file PDF) -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+
+</manifest>

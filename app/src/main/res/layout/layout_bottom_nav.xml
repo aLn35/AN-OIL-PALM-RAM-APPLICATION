@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="horizontal"
+    android:background="#FFFFFFFF"
+    android:padding="10dp"
+    android:elevation="10dp"
+    android:gravity="center">
+
+    <!-- HOME -->
+    <LinearLayout
+        android:id="@+id/navHome"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="@drawable/bg_nav_item"
+        android:padding="8dp">
+
+        <ImageView
+            android:src="@drawable/ic_home"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            app:tint="#3BAA57" />
+    </LinearLayout>
+
+    <!-- NOTA -->
+    <LinearLayout
+        android:id="@+id/navNota"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="@drawable/bg_nav_item"
+        android:padding="8dp">
+
+        <ImageView
+            android:src="@drawable/ic_nota"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            app:tint="#3BAA57" />
+    </LinearLayout>
+
+    <!-- CUSTOMER -->
+    <LinearLayout
+        android:id="@+id/navCustomer"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="@drawable/bg_nav_item"
+        android:padding="8dp">
+
+        <ImageView
+            android:src="@drawable/ic_customer"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            app:tint="#3BAA57" />
+    </LinearLayout>
+
+</LinearLayout>

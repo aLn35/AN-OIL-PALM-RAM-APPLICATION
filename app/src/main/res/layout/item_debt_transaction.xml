@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="14dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F7F9FB"
+    android:layout_marginBottom="10dp"
+    android:elevation="2dp">
+
+    <!-- ROW 1: ICON + TITLE + AMOUNT -->
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- ICON -->
+        <TextView
+            android:id="@+id/tvIcon"
+            android:text="✔"
+            android:textColor="#2E7D32"
+            android:textSize="20sp"
+            android:layout_marginEnd="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- TITLE + DESC -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:text="Pembayaran"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#2E7D32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvDesc"
+                android:text="Pembayaran via nota"
+                android:textColor="#666"
+                android:textSize="12sp"
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!-- AMOUNT -->
+        <TextView
+            android:id="@+id/tvAmount"
+            android:text="- Rp 0,-"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="#2E7D32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <!-- DATE & LIHAT BUKTI -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:text="06 Dec 2025"
+            android:textColor="#999"
+            android:textSize="12sp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvLihatBukti"
+            android:text="Lihat Bukti"
+            android:textColor="#1565C0"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="green_light">#E6F9EA</color>
+    <color name="green_primary">#8FD19E</color>
+    <color name="green_dark">#3B8A57</color>
+    <color name="white">#FFFFFF</color>
+    <color name="text_primary">#123524</color>
+    <color name="nav_green_soft">#55C989</color>   <!-- hijau muda soft -->
+    <color name="nav_green_active">#1B5E20</color> <!-- hijau gelap elegan -->
+    <color name="nav_item_pressed">#E0F2E9</color> <!-- hijau pastel -->
+    <color name="green_700">#1B5E20</color>
+    <color name="green_600">#2E7D32</color>
+
+    <color name="blue_700">#1976D2</color>
+    <color name="blue_600">#1E88E5</color>
+
+    <color name="red_700">#D32F2F</color>
+    <color name="red_600">#E53935</color>
+</resources>

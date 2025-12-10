@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    card_view:cardCornerRadius="12dp"
+    card_view:cardElevation="4dp"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Nama pelanggan -->
+        <TextView
+            android:id="@+id/tvNama"
+            android:text="Nama Pelanggan"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#1B5E20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Telepon -->
+        <TextView
+            android:id="@+id/tvTelepon"
+            android:text="08xxxx"
+            android:textSize="14sp"
+            android:textColor="#444"
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Alamat & Kebun -->
+        <TextView
+            android:id="@+id/tvAlamat"
+            android:text="Pekanbaru • Rawang Kempas"
+            android:textSize="14sp"
+            android:textColor="#555"
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Catatan -->
+        <TextView
+            android:id="@+id/tvCatatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#666"
+            android:textSize="12sp"
+            android:layout_marginTop="3dp"
+            android:text="Catatan: -" />
+
+        <!-- Total Utang -->
+        <TextView
+            android:id="@+id/tvTotalUtang"
+            android:text="Rp 0,-"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#D32F2F"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- ===== Button Bayar ===== -->
+        <Button
+            android:id="@+id/btnPay"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Transaksi"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:backgroundTint="#2E7D32"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

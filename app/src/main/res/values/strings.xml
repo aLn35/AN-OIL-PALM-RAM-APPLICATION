@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ramkrsmama</string>
+    <string name="title_data_pelanggan">Data Pelanggan</string>
+    <string name="add_customer">Tambah Pelanggan</string>
+    <string name="back">Kembali</string>
+</resources>

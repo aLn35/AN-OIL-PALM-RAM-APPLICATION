@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5FFF7">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- BACK BUTTON -->
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="8dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_back"
+            android:contentDescription="@string/back"
+            app:tint="#1B5E20" />
+
+        <!-- NAMA -->
+        <EditText
+            android:id="@+id/edtNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama pelanggan"
+            android:padding="14dp"
+            android:background="@drawable/rounded_box"
+            android:layout_marginTop="10dp"/>
+
+        <!-- TELEPON -->
+        <EditText
+            android:id="@+id/edtTelp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nomor telepon"
+            android:inputType="phone"
+            android:padding="14dp"
+            android:background="@drawable/rounded_box"
+            android:layout_marginTop="10dp"/>
+
+        <!-- ALAMAT -->
+        <EditText
+            android:id="@+id/edtAlamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Alamat"
+            android:padding="14dp"
+            android:background="@drawable/rounded_box"
+            android:layout_marginTop="10dp"/>
+
+        <!-- KEBUN -->
+        <EditText
+            android:id="@+id/edtKebun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Lokasi kebun"
+            android:padding="14dp"
+            android:background="@drawable/rounded_box"
+            android:layout_marginTop="10dp"/>
+
+        <!-- CATATAN -->
+        <EditText
+            android:id="@+id/edtCatatan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Catatan"
+            android:padding="14dp"
+            android:background="@drawable/rounded_box"
+            android:layout_marginTop="10dp"/>
+
+        <!-- BUTTON SIMPAN -->
+        <Button
+            android:id="@+id/btnSimpan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Simpan"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#1B5E20"
+            android:layout_marginTop="20dp"
+            android:padding="14dp"/>
+    </LinearLayout>
+
+</ScrollView>

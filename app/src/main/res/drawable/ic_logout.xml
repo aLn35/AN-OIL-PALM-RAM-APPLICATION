@@ -1,0 +1,16 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Body / Door -->
+    <path
+        android:fillColor="#1B5E20"
+        android:pathData="M3,3h10v2H5v14h8v2H3V3z"/>
+
+    <!-- Arrow -->
+    <path
+        android:fillColor="#D0D32F"
+        android:pathData="M12,17l1.41,1.41L20.83,11l-7.42,-7.41L12,5l5,5H8v2h9l-5,5z"/>
+</vector>
